@@ -19,19 +19,6 @@ By integrating **Mediapipe** for facial landmark detection and **OpenCV** for re
   
 ---
 
-## Table of Contents
-
-- [Project Overview](#overview)
-- [Tech Stack & Libraries](#tech-stack--libraries)
-- [Setup Instructions](#setup-instructions)
-- [Running the Project](#running-the-project)
-- [Logging & Alerts](#logging--alerts)
-- [Evaluation & Extra Credit Ideas](#evaluation--extra-credit-ideas)
-- [Project Report & Deliverables](#project-report--deliverables)
-- [License](#license)
-
----
-
 ## Tech Stack & Libraries
 
 This project utilizes the following technologies and libraries:
