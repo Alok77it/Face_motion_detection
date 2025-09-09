@@ -1,45 +1,58 @@
-1. Project Summary (one-line)
+# Smart Face Motion & Attention Detection
 
-Smart Face Motion & Attention Detection — Realtime system that detects faces, tracks head motion, detects blinks/drowsiness, computes attention level, logs events, and triggers alerts.
+## Overview
 
-2. Deliverables included here
+**Smart Face Motion & Attention Detection** is a real-time system developed in Python that leverages cutting-edge computer vision technologies to track head motion, detect facial landmarks, and monitor user attention levels. This system detects faces, tracks head movement, computes attention levels, detects drowsiness through eye blink detection, and triggers real-time alerts for attention and safety. 
 
-Full working Python prototype (modular functions) — below.
+By integrating **Mediapipe** for facial landmark detection and **OpenCV** for real-time video processing, the system provides an intuitive and actionable approach to detecting drowsiness and inattention.
 
-requirements.txt
+---
 
-Run instructions and demo script.
+## Key Features
 
-Logging format and sample CSV column description.
+- **Face Detection**: Uses Mediapipe's face mesh to detect and track facial landmarks in real-time.
+- **Head Motion Tracking**: Tracks the centroid of the face between frames to compute motion speed and direction.
+- **Drowsiness Detection**: Detects blinking and prolonged eye closure using the Eye Aspect Ratio (EAR).
+- **Attention Level Monitoring**: Computes the user's attention level based on head pose orientation (left, right, up, down).
+- **Real-Time Alerts**: Triggers both visual and audible alerts when the user shows signs of drowsiness or inattention.
+- **Event Logging**: Logs critical events with timestamps, including detected attention levels, eye closure, and movement direction.
+  
+---
 
-Project report structure & slides outline.
+## Table of Contents
 
-Evaluation metrics and experiments to run.
+- [Project Overview](#overview)
+- [Tech Stack & Libraries](#tech-stack--libraries)
+- [Setup Instructions](#setup-instructions)
+- [Running the Project](#running-the-project)
+- [Logging & Alerts](#logging--alerts)
+- [Evaluation & Extra Credit Ideas](#evaluation--extra-credit-ideas)
+- [Project Report & Deliverables](#project-report--deliverables)
+- [License](#license)
 
-Ideas for extra credit (emotion detection, Flask dashboard, multi-person).
+---
 
-3. Tech stack / Libraries
+## Tech Stack & Libraries
 
-Python 3.9+
+This project utilizes the following technologies and libraries:
 
-OpenCV (opencv-python)
+- **Python 3.9+**: Core language for implementing the system.
+- **OpenCV** (`opencv-python`): For video processing, face detection, and displaying alerts.
+- **Mediapipe** (`mediapipe`): For detecting facial landmarks, including eyes, nose, and face outline.
+- **NumPy** (`numpy`): For handling mathematical operations, arrays, and calculations.
+- **Pandas** (`pandas`): For logging events and storing them in CSV format.
+- **Playsound/OS Beep**: For triggering audible alerts (beeps) when critical events occur.
 
-Mediapipe (mediapipe) — face mesh & landmarks
+---
 
-NumPy, Pandas
+## Setup Instructions
 
-Playsound or simple OS beep for alerts (we use OpenCV window beeps by default)
+To get started with this project, follow the steps below to set up the environment, install dependencies, and run the demo script.
 
-4. How it works (brief)
+### 1. Clone the Repository
 
-Use Mediapipe Face Mesh to detect facial landmarks (eyes, nose, face outline).
+Clone the repository to your local machine:
 
-Compute face center and track its movement (centroid delta) between frames → motion direction and speed.
-
-Eye Aspect Ratio (EAR) style measure (from landmarks) to detect blinks and prolonged eye closure → drowsiness.
-
-Head pose approximation using key landmarks to detect left/right/up/down orientation → attention.
-
-System logs events with timestamp, status, direction, EAR, head_pose, and saves frames on critical events.
-
-Trigger audible & on-screen alerts when inattentive or drowsy.
+```bash
+git clone https://github.com/your-username/smart-face-motion-attention-detection.git
+cd smart-face-motion-attention-detection
