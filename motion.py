@@ -237,8 +237,3 @@ while True:
 # -----------------------------
 cap.release()
 cv2.destroyAllWindows()
-
-df = pd.DataFrame(log_rows, columns=columns)
-df.to_csv(LOG_CSV, index=False)
-
-print(f"Finished. Logs saved to {LOG_CSV}")
