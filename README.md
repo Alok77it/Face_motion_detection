@@ -43,3 +43,7 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/your-username/smart-face-motion-attention-detection.git
 cd smart-face-motion-attention-detection
+venv\Scripts\activate
+pip install mediapipe==0.10.11
+
+
